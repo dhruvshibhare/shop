@@ -128,6 +128,7 @@ export default function ProjectShowcase() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                     className="object-cover"
                     priority={index < 4}
+                    loading={index < 4 ? 'eager' : 'lazy'}
                   />
                 </div>
 
