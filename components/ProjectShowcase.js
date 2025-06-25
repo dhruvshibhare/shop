@@ -19,7 +19,7 @@ export default function ProjectShowcase() {
       title: 'Lumina Finance',
       category: 'Corporate Website',
       description: 'Modern fintech platform with real-time data visualization and interactive dashboards.',
-      image: '/shop/images/c1.png',
+      image: '/images/c1.png',
       link: '/shop/projects'
     },
     {
@@ -27,7 +27,7 @@ export default function ProjectShowcase() {
       title: 'Orbital Gallery',
       category: 'Cool Agency',
       description: 'Interactive 3D art gallery experience with WebGL and custom animations.',
-      image: '/shop/images/c2.png',
+      image: '/images/c2.png',
       link: '/shop/projects'
     },
     {
@@ -35,7 +35,7 @@ export default function ProjectShowcase() {
       title: 'Eco Impact',
       category: 'Ecommerce',
       description: 'UX/UI design for an environmental sustainability platform with intuitive data reporting.',
-      image: '/shop/images/e1.png',
+      image: '/images/e1.png',
       link: '/shop/projects'
     },
     {
@@ -43,7 +43,7 @@ export default function ProjectShowcase() {
       title: 'Velocity Store',
       category: 'Ecommerce',
       description: 'E-commerce platform optimization reducing load time by 70% and increasing conversions.',
-      image: '/shop/images/e2.png',
+      image: '/images/e2.png',
       link: '/shop/projects'
     }
   ];
@@ -119,27 +119,17 @@ export default function ProjectShowcase() {
               onMouseLeave={() => setHoveredIndex(null)}
             >
               {/* Project Frame */}
-              <div className="relative w-full aspect-[9/16] bg-card rounded-2xl border border-border shadow-lg overflow-hidden flex items-center justify-center">
-                <motion.div
-                  className="absolute left-0 right-0"
-                  style={{ top: 0, height: '300%' }}
-                  animate={hoveredIndex === index ? { y: ['0%', '-66.66%'] } : { y: '0%' }}
-                  transition={hoveredIndex === index ? {
-                    duration: 20,
-                    repeat: Infinity,
-                    ease: "linear",
-                    delay: 0
-                  } : {}}
-                >
+              <div className="relative w-full aspect-[9/16] bg-card rounded-2xl border border-border shadow-lg overflow-hidden">
+                <div className="relative w-full h-full">
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                     className="object-cover"
-                    style={{ objectPosition: 'top' }}
-                    loading="lazy"
+                    priority={index < 4}
                   />
-                </motion.div>
+                </div>
 
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
