@@ -19,7 +19,7 @@ export default function ProjectShowcase() {
       title: 'Lumina Finance',
       category: 'Corporate Website',
       description: 'Modern fintech platform with real-time data visualization and interactive dashboards.',
-      image: '/shop/images/c1.png',
+      image: '/images/c1.png',
       link: '/projects'
     },
     {
@@ -27,7 +27,7 @@ export default function ProjectShowcase() {
       title: 'Orbital Gallery',
       category: 'Cool Agency',
       description: 'Interactive 3D art gallery experience with WebGL and custom animations.',
-      image: '/shop/images/c2.png',
+      image: '/images/c2.png',
       link: '/projects'
     },
     {
@@ -35,7 +35,7 @@ export default function ProjectShowcase() {
       title: 'Eco Impact',
       category: 'Ecommerce',
       description: 'UX/UI design for an environmental sustainability platform with intuitive data reporting.',
-      image: '/shop/images/e1.png',
+      image: '/images/e1.png',
       link: '/projects'
     },
     {
@@ -43,7 +43,7 @@ export default function ProjectShowcase() {
       title: 'Velocity Store',
       category: 'Ecommerce',
       description: 'E-commerce platform optimization reducing load time by 70% and increasing conversions.',
-      image: '/shop/images/e2.png',
+      image: '/images/e2.png',
       link: '/projects'
     }
   ];
