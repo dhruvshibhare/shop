@@ -14,7 +14,6 @@ const nextConfig = {
   },
   assetPrefix: '/shop/',
   experimental: {
-    optimizeCss: true,
     appDir: true
   },
   compiler: {
