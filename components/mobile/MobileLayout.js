@@ -7,10 +7,12 @@ import FloatingActionButton from './FloatingActionButton';
 import PullToRefresh from './PullToRefresh';
 
 export default function MobileLayout({ children }) {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+  const [isMobile, setIsMobile] = useState(true); // Default to true to avoid flash
   const [isRefreshing, setIsRefreshing] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
@@ -27,6 +29,11 @@ export default function MobileLayout({ children }) {
     setIsRefreshing(false);
     // You can add actual refresh logic here
   };
+
+  // Don't render anything during SSR
+  if (!isMounted) {
+    return null;
+  }
 
   if (!isMobile) {
     return children;

@@ -14,6 +14,20 @@ export default function BottomSheet({
 }) {
   const [currentSnap, setCurrentSnap] = useState(initialSnap);
   const [isDragging, setIsDragging] = useState(false);
+  const [windowHeight, setWindowHeight] = useState(0);
+
+  useEffect(() => {
+    // Set initial window height
+    setWindowHeight(window.innerHeight);
+
+    // Update window height on resize
+    const handleResize = () => {
+      setWindowHeight(window.innerHeight);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     if (isOpen) {
@@ -31,9 +45,9 @@ export default function BottomSheet({
     setIsDragging(false);
     
     const velocity = info.velocity.y;
-    const currentHeight = window.innerHeight * currentSnap;
+    const currentHeight = windowHeight * currentSnap;
     const newPosition = currentHeight - info.offset.y;
-    const newSnapRatio = newPosition / window.innerHeight;
+    const newSnapRatio = newPosition / windowHeight;
 
     // Find closest snap point
     let closestSnap = snapPoints.reduce((prev, curr) => 
@@ -68,6 +82,11 @@ export default function BottomSheet({
     }
   };
 
+  // Don't render anything during SSR
+  if (typeof window === 'undefined') {
+    return null;
+  }
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -93,7 +112,7 @@ export default function BottomSheet({
               duration: isDragging ? 0 : undefined
             }}
             drag="y"
-            dragConstraints={{ top: 0, bottom: window.innerHeight * (1 - Math.max(...snapPoints)) }}
+            dragConstraints={{ top: 0, bottom: windowHeight * (1 - Math.max(...snapPoints)) }}
             dragElastic={0.1}
             onDragStart={() => setIsDragging(true)}
             onDragEnd={handleDragEnd}

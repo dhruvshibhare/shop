@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 import { ArrowUpRight, Heart, Share2 } from 'lucide-react';
 import Image from 'next/image';
@@ -15,12 +15,17 @@ export default function InteractiveCard({
 }) {
   const [isPressed, setIsPressed] = useState(false);
   const [isLiked, setIsLiked] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const cardRef = useRef(null);
   
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const rotateX = useTransform(y, [-100, 100], [30, -30]);
   const rotateY = useTransform(x, [-100, 100], [-30, 30]);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const handleMouseMove = (event) => {
     if (!cardRef.current) return;
@@ -42,7 +47,7 @@ export default function InteractiveCard({
     e.stopPropagation();
     setIsLiked(!isLiked);
     // Haptic feedback
-    if (navigator.vibrate) {
+    if (isMounted && typeof navigator !== 'undefined' && navigator.vibrate) {
       navigator.vibrate(isLiked ? 30 : 50);
     }
   };
@@ -50,10 +55,15 @@ export default function InteractiveCard({
   const handleShare = (e) => {
     e.stopPropagation();
     // Haptic feedback
-    if (navigator.vibrate) {
+    if (isMounted && typeof navigator !== 'undefined' && navigator.vibrate) {
       navigator.vibrate(30);
     }
   };
+
+  // Don't render during SSR
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <motion.div
