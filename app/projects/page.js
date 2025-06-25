@@ -8,7 +8,7 @@ import dynamic from 'next/dynamic';
 
 // Lazy load Three.js only when needed
 const loadThreeJS = () => import('three');
-const ProjectShowcase = dynamic(() => import('@/components/ProjectShowcase'), { ssr: false, loading: () => <div style={{height: 400}} /> });
+const ProjectShowcase = dynamic(() => import('../../components/ProjectShowcase'), { ssr: false, loading: () => <div style={{height: 400}} /> });
 
 // Add metadata export for static generation
 export const metadata = {
