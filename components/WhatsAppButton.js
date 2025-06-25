@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
 
-export default function WhatsAppButton({ phoneNumber = "+91 9329990175" }) {
+export default function WhatsAppButton({ phoneNumber = "919329990175" }) {
   const [showTooltip, setShowTooltip] = useState(false);
 
   const handleWhatsAppClick = () => {

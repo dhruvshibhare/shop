@@ -31,7 +31,7 @@ export default function Projects() {
     {
       title: 'Lumina Finance',
       category: 'Corporate',
-      image: '/images/c1.png',
+      image: '/shop/images/c1.png',
       description: 'A modern fintech platform with real-time data visualization and interactive dashboards.',
       technologies: ['React', 'Node.js', 'D3.js', 'MongoDB'],
       link: '#',
@@ -42,7 +42,7 @@ export default function Projects() {
     {
       title: 'Orbital Gallery',
       category: 'Corporate',
-      image: '/images/c2.png',
+      image: '/shop/images/c2.png',
       description: 'Interactive 3D art gallery experience with WebGL and custom animations.',
       technologies: ['Three.js', 'WebGL', 'React', 'GSAP'],
       link: '#',
@@ -53,7 +53,7 @@ export default function Projects() {
     {
       title: 'Orbital Gallery',
       category: 'Corporate',
-      image: '/images/c3.png',
+      image: '/shop/images/c3.png',
       description: 'Interactive 3D art gallery experience with WebGL and custom animations.',
       technologies: ['Three.js', 'WebGL', 'React', 'GSAP'],
       link: '#',
@@ -64,7 +64,7 @@ export default function Projects() {
     {
       title: 'Orbital Gallery',
       category: 'Corporate',
-      image: '/images/c4.png',
+      image: '/shop/images/c4.png',
       description: 'Interactive 3D art gallery experience with WebGL and custom animations.',
       technologies: ['Three.js', 'WebGL', 'React', 'GSAP'],
       link: '#',
@@ -75,7 +75,7 @@ export default function Projects() {
     {
       title: 'Eco Impact',
       category: 'Ecommerce',
-      image: '/images/e1.png',
+      image: '/shop/images/e1.png',
       description: 'UX/UI design for an environmental sustainability platform with intuitive data reporting.',
       technologies: ['Figma', 'React', 'Chart.js', 'Tailwind'],
       link: '#',
@@ -86,7 +86,7 @@ export default function Projects() {
     {
       title: 'Velocity Store',
       category: 'Ecommerce',
-      image: '/images/e2.png',
+      image: '/shop/images/e2.png',
       description: 'E-commerce platform optimization reducing load time by 70% and increasing conversions.',
       technologies: ['Next.js', 'Vercel', 'Stripe', 'Prisma'],
       link: '#',
@@ -97,7 +97,7 @@ export default function Projects() {
      {
       title: 'Velocity Store',
       category: 'Ecommerce',
-      image: '/images/e3.png',
+      image: '/shop/images/e3.png',
       description: 'E-commerce platform optimization reducing load time by 70% and increasing conversions.',
       technologies: ['Next.js', 'Vercel', 'Stripe', 'Prisma'],
       link: '#',
@@ -108,7 +108,7 @@ export default function Projects() {
      {
       title: 'Velocity Store',
       category: 'Ecommerce',
-      image: '/images/e4.png',
+      image: '/shop/images/e4.png',
       description: 'E-commerce platform optimization reducing load time by 70% and increasing conversions.',
       technologies: ['Next.js', 'Vercel', 'Stripe', 'Prisma'],
       link: '#',
@@ -119,7 +119,7 @@ export default function Projects() {
     {
       title: 'Harmony Music',
       category: 'Healthcare',
-      image: '/images/h1.png',
+      image: '/shop/images/h1.png',
       description: 'Streaming service with custom audio visualization and seamless playback.',
       technologies: ['Vue.js', 'Web Audio API', 'Firebase', 'PWA'],
       link: '#',
@@ -130,7 +130,7 @@ export default function Projects() {
      {
       title: 'Harmony Music',
       category: 'Healthcare',
-      image: '/images/h2.png',
+      image: '/shop/images/h2.png',
       description: 'Streaming service with custom audio visualization and seamless playback.',
       technologies: ['Vue.js', 'Web Audio API', 'Firebase', 'PWA'],
       link: '#',
@@ -141,7 +141,7 @@ export default function Projects() {
     {
       title: 'Nebula Explorer',
       category: 'Real Estate',
-      image: '/images/t.png',
+      image: '/shop/images/t.png',
       description: 'Interactive space exploration experience with 3D planetary systems and educational content.',
       technologies: ['Three.js', 'React', 'WebXR', 'Blender'],
       link: '#',
@@ -152,7 +152,7 @@ export default function Projects() {
       {
       title: 'Nebula Explorer',
       category: 'Real Estate',
-      image: '/images/t1.png',
+      image: '/shop/images/t1.png',
       description: 'Interactive space exploration experience with 3D planetary systems and educational content.',
       technologies: ['Three.js', 'React', 'WebXR', 'Blender'],
       link: '#',
@@ -163,7 +163,7 @@ export default function Projects() {
       {
       title: 'Nebula Explorer',
       category: 'Real Estate',
-      image: '/images/t2.png',
+      image: '/shop/images/t2.png',
       description: 'Interactive space exploration experience with 3D planetary systems and educational content.',
       technologies: ['Three.js', 'React', 'WebXR', 'Blender'],
       link: '#',
@@ -174,7 +174,7 @@ export default function Projects() {
       {
       title: 'Nebula Explorer',
       category: 'Real Estate',
-      image: '/images/t3.png',
+      image: '/shop/images/t3.png',
       description: 'Interactive space exploration experience with 3D planetary systems and educational content.',
       technologies: ['Three.js', 'React', 'WebXR', 'Blender'],
       link: '#',

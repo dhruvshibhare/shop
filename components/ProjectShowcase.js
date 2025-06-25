@@ -19,32 +19,32 @@ export default function ProjectShowcase() {
       title: 'Lumina Finance',
       category: 'Corporate Website',
       description: 'Modern fintech platform with real-time data visualization and interactive dashboards.',
-      image: '/images/c1.png',
-      link: '/projects'
+      image: '/shop/images/c1.png',
+      link: '/shop/projects'
     },
     {
       id: 2,
       title: 'Orbital Gallery',
       category: 'Cool Agency',
       description: 'Interactive 3D art gallery experience with WebGL and custom animations.',
-      image: '/images/c2.png',
-      link: '/projects'
+      image: '/shop/images/c2.png',
+      link: '/shop/projects'
     },
     {
       id: 3,
       title: 'Eco Impact',
       category: 'Ecommerce',
       description: 'UX/UI design for an environmental sustainability platform with intuitive data reporting.',
-      image: '/images/e1.png',
-      link: '/projects'
+      image: '/shop/images/e1.png',
+      link: '/shop/projects'
     },
     {
       id: 4,
       title: 'Velocity Store',
       category: 'Ecommerce',
       description: 'E-commerce platform optimization reducing load time by 70% and increasing conversions.',
-      image: '/images/e2.png',
-      link: '/projects'
+      image: '/shop/images/e2.png',
+      link: '/shop/projects'
     }
   ];
 
@@ -187,7 +187,7 @@ export default function ProjectShowcase() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          <Link href="/projects">
+          <Link href="/shop/projects">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
