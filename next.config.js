@@ -9,9 +9,7 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
-    path: '/shop/_next/image',
-    formats: ['image/webp', 'image/avif'],
-    // domains: ['your-image-domain.com'], // Add if using external images
+    remotePatterns: [],
   },
   experimental: {
     optimizeCss: true,
