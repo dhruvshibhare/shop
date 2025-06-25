@@ -19,7 +19,7 @@ export default function ProjectShowcase() {
       title: 'Lumina Finance',
       category: 'Corporate Website',
       description: 'Modern fintech platform with real-time data visualization and interactive dashboards.',
-      image: 'shop/images/c1.png',
+      image: 'shop/c1.png',
       link: '/projects'
     },
     {
