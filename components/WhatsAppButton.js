@@ -4,12 +4,15 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
 
-export default function WhatsAppButton({ phoneNumber = "919329990175" }) {
+export default function WhatsAppButton({ phoneNumber = "+919329990175" }) {
   const [showTooltip, setShowTooltip] = useState(false);
 
   const handleWhatsAppClick = () => {
+    // Remove any spaces but keep the plus sign for the country code
+    const cleanPhoneNumber = phoneNumber.replace(/\s/g, '');
     const message = encodeURIComponent("Hello! I'm interested in your services.");
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    // Use the international format in the WhatsApp URL
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${cleanPhoneNumber}&text=${message}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 
