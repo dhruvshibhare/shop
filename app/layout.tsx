@@ -41,7 +41,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
-        <WhatsAppButton phoneNumber="1234567890" />
+        <WhatsAppButton phoneNumber="+91 9329990175" />
       </body>
     </html>
   );
