@@ -3,23 +3,13 @@ const nextConfig = {
   output: 'export',
   basePath: '/shop',
   images: {
-    unoptimized: true,
-    loader: 'custom',
-    loaderFile: './image-loader.js'
+    unoptimized: true
   },
   trailingSlash: true,
-  distDir: 'dist',
+  distDir: 'out',
   eslint: {
-    ignoreDuringBuilds: true,
-  },
-  assetPrefix: '/shop/',
-  experimental: {
-    appDir: true
-  },
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
-  },
-  swcMinify: true,
+    ignoreDuringBuilds: true
+  }
 };
 
 module.exports = nextConfig;
