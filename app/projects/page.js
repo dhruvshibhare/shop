@@ -10,6 +10,17 @@ import dynamic from 'next/dynamic';
 const loadThreeJS = () => import('three');
 const ProjectShowcase = dynamic(() => import('@/components/ProjectShowcase'), { ssr: false, loading: () => <div style={{height: 400}} /> });
 
+// Add metadata export for static generation
+export const metadata = {
+  title: 'Our Projects | ShopVix',
+  description: 'Explore our portfolio of innovative digital solutions that push boundaries and deliver exceptional results for our clients.',
+};
+
+// Add generateStaticParams for static generation
+export async function generateStaticParams() {
+  return [];
+}
+
 export default function Projects() {
   const [filter, setFilter] = useState('all');
   const [hoveredIndex, setHoveredIndex] = useState(null);

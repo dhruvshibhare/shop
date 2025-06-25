@@ -10,11 +10,11 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   const navItems = [
-    { label: 'Home', href: '/' },
-    { label: 'About', href: '/about' },
-    { label: 'Services', href: '/services' },
-    { label: 'Projects', href: '/projects' },
-    { label: 'Contact', href: '/contact' }
+    { label: 'Home', href: '/shop' },
+    { label: 'About', href: '/shop/about' },
+    { label: 'Services', href: '/shop/services' },
+    { label: 'Projects', href: '/shop/projects' },
+    { label: 'Contact', href: '/shop/contact' }
   ];
   
   useEffect(() => {
@@ -35,7 +35,7 @@ export default function Header() {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link href="/" className="text-xl font-bold">
+        <Link href="/shop" className="text-xl font-bold">
           <span className="text-primary">ShopVix</span> 
         </Link>
         

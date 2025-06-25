@@ -9,7 +9,9 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div className="md:col-span-1">
-            <h3 className="text-xl font-bold mb-4"><span className="text-primary">ShopVix</span></h3>
+            <Link href="/shop" className="inline-block">
+              <h3 className="text-xl font-bold mb-4"><span className="text-primary">ShopVix</span></h3>
+            </Link>
             <p className="text-muted-foreground mb-6">
               Creating exceptional digital experiences through innovative web development, design, and 3D interactions.
             </p>
@@ -32,20 +34,20 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4">Services</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Web Development</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Interactive Experiences</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">UX/UI Design</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Performance Optimization</a></li>
+              <li><Link href="/shop/services#web-development" className="text-muted-foreground hover:text-primary transition-colors">Web Development</Link></li>
+              <li><Link href="/shop/services#interactive" className="text-muted-foreground hover:text-primary transition-colors">Interactive Experiences</Link></li>
+              <li><Link href="/shop/services#design" className="text-muted-foreground hover:text-primary transition-colors">UX/UI Design</Link></li>
+              <li><Link href="/shop/services#optimization" className="text-muted-foreground hover:text-primary transition-colors">Performance Optimization</Link></li>
             </ul>
           </div>
           
           <div>
             <h4 className="font-bold mb-4">Quick Links</h4>
             <ul className="space-y-3">
-              <li><Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link href="/projects" className="text-muted-foreground hover:text-primary transition-colors">Projects</Link></li>
-              <li><Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link></li>
-              <li><Link href="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/shop/about" className="text-muted-foreground hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link href="/shop/projects" className="text-muted-foreground hover:text-primary transition-colors">Projects</Link></li>
+              <li><Link href="/shop/contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link></li>
+              <li><Link href="/shop/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link></li>
             </ul>
           </div>
           

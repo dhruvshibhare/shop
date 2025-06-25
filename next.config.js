@@ -3,6 +3,7 @@ const nextConfig = {
   output: 'export',
   basePath: '/shop',
   assetPrefix: '/shop/',
+  trailingSlash: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
