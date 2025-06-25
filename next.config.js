@@ -2,15 +2,14 @@
 const nextConfig = {
   output: 'export',
   basePath: '/shop',
-  assetPrefix: '/shop/',
+  images: {
+    unoptimized: true
+  },
   trailingSlash: true,
   eslint: {
     ignoreDuringBuilds: true,
   },
-  images: {
-    unoptimized: true,
-    remotePatterns: [],
-  },
+  assetPrefix: '/shop/',
   experimental: {
     optimizeCss: true,
   },
