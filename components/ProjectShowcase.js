@@ -178,7 +178,7 @@ export default function ProjectShowcase() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
-          <Link href="/shop/projects">
+          <Link href="/projects">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
