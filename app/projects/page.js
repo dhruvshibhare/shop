@@ -16,11 +16,6 @@ export const metadata = {
   description: 'Explore our portfolio of innovative digital solutions that push boundaries and deliver exceptional results for our clients.',
 };
 
-// Add generateStaticParams for static generation
-export async function generateStaticParams() {
-  return [];
-}
-
 export default function Projects() {
   const [filter, setFilter] = useState('all');
   const [hoveredIndex, setHoveredIndex] = useState(null);
