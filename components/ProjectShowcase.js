@@ -125,7 +125,7 @@ export default function ProjectShowcase() {
                   style={{ top: 0, height: '100%' }}
                   animate={hoveredIndex === index ? { y: ['0%', '-66.66%'] } : { y: '0%' }}
                   transition={hoveredIndex === index ? {
-                    duration: 8,
+                    duration: 4,
                     repeat: Infinity,
                     ease: "linear",
                     delay: 0
