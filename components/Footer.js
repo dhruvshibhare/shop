@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Facebook, Twitter, Instagram, Linkedin, ArrowRight } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -34,20 +34,52 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4">Services</h4>
             <ul className="space-y-3">
-              <li><Link href="/shop/services#web-development" className="text-muted-foreground hover:text-primary transition-colors">Web Development</Link></li>
-              <li><Link href="/shop/services#interactive" className="text-muted-foreground hover:text-primary transition-colors">Interactive Experiences</Link></li>
-              <li><Link href="/shop/services#design" className="text-muted-foreground hover:text-primary transition-colors">UX/UI Design</Link></li>
-              <li><Link href="/shop/services#optimization" className="text-muted-foreground hover:text-primary transition-colors">Performance Optimization</Link></li>
+              <li>
+                <Link href="/shop/services#web-development">
+                  <span className="text-muted-foreground hover:text-primary transition-colors">Web Development</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/shop/services#interactive">
+                  <span className="text-muted-foreground hover:text-primary transition-colors">Interactive Experiences</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/shop/services#design">
+                  <span className="text-muted-foreground hover:text-primary transition-colors">UX/UI Design</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/shop/services#optimization">
+                  <span className="text-muted-foreground hover:text-primary transition-colors">Performance Optimization</span>
+                </Link>
+              </li>
             </ul>
           </div>
           
           <div>
             <h4 className="font-bold mb-4">Quick Links</h4>
             <ul className="space-y-3">
-              <li><Link href="/shop/about" className="text-muted-foreground hover:text-primary transition-colors">About Us</Link></li>
-              <li><Link href="/shop/projects" className="text-muted-foreground hover:text-primary transition-colors">Projects</Link></li>
-              <li><Link href="/shop/contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link></li>
-              <li><Link href="/shop/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link></li>
+              <li>
+                <Link href="/shop/about">
+                  <span className="text-muted-foreground hover:text-primary transition-colors">About Us</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/shop/projects">
+                  <span className="text-muted-foreground hover:text-primary transition-colors">Projects</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/shop/contact">
+                  <span className="text-muted-foreground hover:text-primary transition-colors">Contact</span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/shop/privacy-policy">
+                  <span className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</span>
+                </Link>
+              </li>
             </ul>
           </div>
           
