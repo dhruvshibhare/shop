@@ -25,72 +25,72 @@ export default function Projects() {
     {
       title: 'Lumina Finance',
       category: 'Corporate',
-      image: '/images/c1.png',
+      image: '/shop/c1.png',
     },
     {
       title: 'Orbital Gallery',
       category: 'Corporate',
-      image: '/images/c2.png',
+      image: '/shop/c2.png',
     },
     {
       title: 'Orbital Gallery',
       category: 'Corporate',
-      image: '/images/c3.png',
+      image: '/shop/c3.png',
     },
     {
       title: 'Orbital Gallery',
       category: 'Corporate',
-      image: '/images/c4.png',
+      image: '/shop/c4.png',
     },
     {
       title: 'Eco Impact',
       category: 'Ecommerce',
-      image: '/images/e1.png',
+      image: '/shop/e1.png',
     },
     {
       title: 'Velocity Store',
       category: 'Ecommerce',
-      image: '/images/e2.png',
+      image: '/shop/e2.png',
     },
     {
       title: 'Velocity Store',
       category: 'Ecommerce',
-      image: '/images/e3.png',
+      image: '/shop/e3.png',
     },
     {
       title: 'Velocity Store',
       category: 'Ecommerce',
-      image: '/images/e4.png',
+      image: '/shop/e4.png',
     },
     {
       title: 'Harmony Music',
       category: 'Healthcare',
-      image: '/images/h1.png',
+      image: '/shop/h1.png',
     },
     {
       title: 'Harmony Music',
       category: 'Healthcare',
-      image: '/images/h2.png',
+      image: '/shop/h2.png',
     },
     {
       title: 'Nebula Explorer',
       category: 'Real Estate',
-      image: '/images/t.png',
+      image: '/shop/t.png',
     },
     {
       title: 'Nebula Explorer',
       category: 'Real Estate',
-      image: '/images/t1.png',
+      image: '/shop/t1.png',
     },
     {
       title: 'Nebula Explorer',
       category: 'Real Estate',
-      image: '/images/t2.png',
+      image: '/shop/t2.png',
     },
     {
       title: 'Nebula Explorer',
       category: 'Real Estate',
-      image: '/images/t3.png',
+      image: '/shop/t3.png',
     },
   ];
 
@@ -115,7 +115,7 @@ export default function Projects() {
           className="absolute inset-0 z-0"
         >
           <Image
-            src="/images/h1.png"
+            src="/shop/b.png"
             alt="Projects Hero"
             fill
             className="object-cover"
