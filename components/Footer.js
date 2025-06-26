@@ -16,16 +16,16 @@ export default function Footer() {
               Creating exceptional digital experiences through innovative web development, design, and 3D interactions.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-primary transition-colors">
+              <a href="#" className="hover:text-primary transition-colors" aria-label="Facebook">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="hover:text-primary transition-colors">
+              <a href="#" className="hover:text-primary transition-colors" aria-label="Twitter">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="hover:text-primary transition-colors">
+              <a href="#" className="hover:text-primary transition-colors" aria-label="Instagram">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="hover:text-primary transition-colors">
+              <a href="#" className="hover:text-primary transition-colors" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
@@ -35,23 +35,23 @@ export default function Footer() {
             <h4 className="font-bold mb-4">Services</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/shop/services#web-development">
-                  <span className="text-muted-foreground hover:text-primary transition-colors">Web Development</span>
+                <Link href="/services#web-development" className="text-muted-foreground hover:text-primary transition-colors">
+                  Web Development
                 </Link>
               </li>
               <li>
-                <Link href="/shop/services#interactive">
-                  <span className="text-muted-foreground hover:text-primary transition-colors">Interactive Experiences</span>
+                <Link href="/services#interactive" className="text-muted-foreground hover:text-primary transition-colors">
+                  Interactive Experiences
                 </Link>
               </li>
               <li>
-                <Link href="/shop/services#design">
-                  <span className="text-muted-foreground hover:text-primary transition-colors">UX/UI Design</span>
+                <Link href="/services#design" className="text-muted-foreground hover:text-primary transition-colors">
+                  UX/UI Design
                 </Link>
               </li>
               <li>
-                <Link href="/shop/services#optimization">
-                  <span className="text-muted-foreground hover:text-primary transition-colors">Performance Optimization</span>
+                <Link href="/services#optimization" className="text-muted-foreground hover:text-primary transition-colors">
+                  Performance Optimization
                 </Link>
               </li>
             </ul>
@@ -61,23 +61,23 @@ export default function Footer() {
             <h4 className="font-bold mb-4">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/shop/about">
-                  <span className="text-muted-foreground hover:text-primary transition-colors">About Us</span>
+                <Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">
+                  About Us
                 </Link>
               </li>
               <li>
-                <Link href="/shop/projects">
-                  <span className="text-muted-foreground hover:text-primary transition-colors">Projects</span>
+                <Link href="/projects" className="text-muted-foreground hover:text-primary transition-colors">
+                  Projects
                 </Link>
               </li>
               <li>
-                <Link href="/shop/contact">
-                  <span className="text-muted-foreground hover:text-primary transition-colors">Contact</span>
+                <Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+                  Contact
                 </Link>
               </li>
               <li>
-                <Link href="/shop/privacy-policy">
-                  <span className="text-muted-foreground hover:text-primary transition-colors">Privacy Policy</span>
+                <Link href="/privacy-policy" className="text-muted-foreground hover:text-primary transition-colors">
+                  Privacy Policy
                 </Link>
               </li>
             </ul>
