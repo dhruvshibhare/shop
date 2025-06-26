@@ -103,7 +103,7 @@ export default function Projects() {
   ];
 
   const filteredProjects = projects.filter(project => {
-    return filter === 'Corporate' || project.category === filter;
+    return filter === 'all' || project.category === filter;
   });
 
   return (
