@@ -115,7 +115,7 @@ export default function Projects() {
           className="absolute inset-0 z-0"
         >
           <Image
-            src="/shop/b.png"
+            src="/shop/d.png"
             alt="Projects Hero"
             fill
             className="object-cover"
