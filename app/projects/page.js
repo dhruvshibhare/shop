@@ -6,7 +6,7 @@ import { motion, useInView, useTransform, useScroll } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 
 export default function Projects() {
-  const [filter, setFilter] = useState('all');
+  const [filter, setFilter] = useState('Corporate');
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const heroRef = useRef(null);
   const showcaseRef = useRef(null);
