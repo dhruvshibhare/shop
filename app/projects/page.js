@@ -192,7 +192,7 @@ export default function Projects() {
                     style={{ top: 0, height: '100%' }}
                     animate={hoveredIndex === index ? { y: ['0%', '-66.66%'] } : { y: '0%' }}
                     transition={hoveredIndex === index ? {
-                      duration: 40, // slow scroll
+                      duration: 4, // slow scroll
                       repeat: Infinity,
                       ease: "linear",
                       delay: 0
