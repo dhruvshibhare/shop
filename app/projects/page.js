@@ -23,72 +23,72 @@ export default function Projects() {
 
   const projects = [
     {
-      title: 'Lumina Finance',
+      title: 'Corporate/Ajency',
       category: 'Corporate',
       image: '/shop/c1.png',
     },
     {
-      title: 'Orbital Gallery',
+      title: 'Corporate/Ajency',
       category: 'Corporate',
       image: '/shop/c2.png',
     },
     {
-      title: 'Orbital Gallery',
+      title: 'Corporate/Ajency',
       category: 'Corporate',
       image: '/shop/c3.png',
     },
     {
-      title: 'Orbital Gallery',
+      title: 'Corporate/Ajency',
       category: 'Corporate',
       image: '/shop/c4.png',
     },
     {
-      title: 'Eco Impact',
+      title: 'Ecommerce Store',
       category: 'Ecommerce',
       image: '/shop/e1.png',
     },
     {
-      title: 'Velocity Store',
+      title: 'Ecommerce Store',
       category: 'Ecommerce',
       image: '/shop/e2.png',
     },
     {
-      title: 'Velocity Store',
+      title: 'Ecommerce Store',
       category: 'Ecommerce',
       image: '/shop/e3.png',
     },
     {
-      title: 'Velocity Store',
+      title: 'Ecommerce Store',
       category: 'Ecommerce',
       image: '/shop/e4.png',
     },
     {
-      title: 'Harmony Music',
+      title: 'Hospital/Farmacy',
       category: 'Healthcare',
       image: '/shop/h1.png',
     },
     {
-      title: 'Harmony Music',
+      title: 'Hospital/Farmacy',
       category: 'Healthcare',
       image: '/shop/h2.png',
     },
     {
-      title: 'Nebula Explorer',
+      title: 'Real Estate',
       category: 'Real Estate',
       image: '/shop/t.png',
     },
     {
-      title: 'Nebula Explorer',
+      title: 'Real Estate',
       category: 'Real Estate',
       image: '/shop/t1.png',
     },
     {
-      title: 'Nebula Explorer',
+      title: 'Real Estate',
       category: 'Real Estate',
       image: '/shop/t2.png',
     },
     {
-      title: 'Nebula Explorer',
+      title: 'Real Estate',
       category: 'Real Estate',
       image: '/shop/t3.png',
     },
@@ -103,7 +103,7 @@ export default function Projects() {
   ];
 
   const filteredProjects = projects.filter(project => {
-    return filter === 'all' || project.category === filter;
+    return filter === 'Corporate' || project.category === filter;
   });
 
   return (
