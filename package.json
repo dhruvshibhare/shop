@@ -2,7 +2,7 @@
   "name": "nexus-web-studio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dhruvshibhare.github.io/shop",
+  "homepage": "www.shopvix.co",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
