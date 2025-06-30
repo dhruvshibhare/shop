@@ -21,9 +21,9 @@ export default function Projects() {
   const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
-  // Card height and image height for scroll calculation
-  const CARD_HEIGHT = 400; // px
-  const IMAGE_HEIGHT = 1200; // px (visible portion for animation, adjust as needed)
+  // Visible card window and image visible portion
+  const CARD_HEIGHT = 400; // px, card viewport
+  const IMAGE_HEIGHT = 1200; // px, visible image portion to scroll
   const SCROLL_AMOUNT = IMAGE_HEIGHT - CARD_HEIGHT; // px
 
   const projects = [
@@ -156,7 +156,8 @@ export default function Projects() {
                       style={{
                         height: `${IMAGE_HEIGHT}px`,
                         width: '100%',
-                        objectPosition: 'top'
+                        objectPosition: 'top',
+                        pointerEvents: 'none'
                       }}
                       loading={index < 6 ? 'eager' : 'lazy'}
                     />
