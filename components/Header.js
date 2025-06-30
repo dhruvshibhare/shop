@@ -35,7 +35,7 @@ export default function Header() {
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link href="/shop" className="text-xl font-bold">
+        <Link href="/" className="text-xl font-bold">
           <span className="text-primary">ShopVix</span> 
         </Link>
         
