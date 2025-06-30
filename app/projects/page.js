@@ -22,20 +22,76 @@ export default function Projects() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   const projects = [
-    { title: 'Corporate/Ajency', category: 'Corporate', image: '/c1.png' },
-    { title: 'Corporate/Ajency', category: 'Corporate', image: '/c2.png' },
-    { title: 'Corporate/Ajency', category: 'Corporate', image: '/c3.png' },
-    { title: 'Corporate/Ajency', category: 'Corporate', image: '/c4.png' },
-    { title: 'Ecommerce Store', category: 'Ecommerce', image: '/e1.png' },
-    { title: 'Ecommerce Store', category: 'Ecommerce', image: '/e2.png' },
-    { title: 'Ecommerce Store', category: 'Ecommerce', image: '/e3.png' },
-    { title: 'Ecommerce Store', category: 'Ecommerce', image: '/e4.png' },
-    { title: 'Hospital/Farmacy', category: 'Healthcare', image: '/h1.png' },
-    { title: 'Hospital/Farmacy', category: 'Healthcare', image: '/h2.png' },
-    { title: 'Real Estate', category: 'Real Estate', image: '/t.png' },
-    { title: 'Real Estate', category: 'Real Estate', image: '/t1.png' },
-    { title: 'Real Estate', category: 'Real Estate', image: '/t2.png' },
-    { title: 'Real Estate', category: 'Real Estate', image: '/t3.png' },
+    {
+      title: 'Corporate/Ajency',
+      category: 'Corporate',
+      image: '/c1.png',
+    },
+    {
+      title: 'Corporate/Ajency',
+      category: 'Corporate',
+      image: '/c2.png',
+    },
+    {
+      title: 'Corporate/Ajency',
+      category: 'Corporate',
+      image: '/c3.png',
+    },
+    {
+      title: 'Corporate/Ajency',
+      category: 'Corporate',
+      image: '/c4.png',
+    },
+    {
+      title: 'Ecommerce Store',
+      category: 'Ecommerce',
+      image: '/e1.png',
+    },
+    {
+      title: 'Ecommerce Store',
+      category: 'Ecommerce',
+      image: '/e2.png',
+    },
+    {
+      title: 'Ecommerce Store',
+      category: 'Ecommerce',
+      image: '/e3.png',
+    },
+    {
+      title: 'Ecommerce Store',
+      category: 'Ecommerce',
+      image: '/e4.png',
+    },
+    {
+      title: 'Hospital/Farmacy',
+      category: 'Healthcare',
+      image: '/h1.png',
+    },
+    {
+      title: 'Hospital/Farmacy',
+      category: 'Healthcare',
+      image: '/h2.png',
+    },
+    {
+      title: 'Real Estate',
+      category: 'Real Estate',
+      image: '/t.png',
+    },
+    {
+      title: 'Real Estate',
+      category: 'Real Estate',
+      image: '/t1.png',
+    },
+    {
+      title: 'Real Estate',
+      category: 'Real Estate',
+      image: '/t2.png',
+    },
+    {
+      title: 'Real Estate',
+      category: 'Real Estate',
+      image: '/t3.png',
+    },
   ];
 
   const filters = [
@@ -46,15 +102,20 @@ export default function Projects() {
     { value: 'Healthcare', label: 'Healthcare' }
   ];
 
-  const filteredProjects = projects.filter(project => filter === 'all' || project.category === filter);
+  const filteredProjects = projects.filter(project => {
+    return filter === 'all' || project.category === filter;
+  });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-background">
       {/* Hero Section */}
       <section ref={heroRef} className="relative h-[60vh] min-h-[500px] overflow-hidden">
-        <motion.div style={{ y, opacity }} className="absolute inset-0 z-0">
+        <motion.div
+          style={{ y, opacity }}
+          className="absolute inset-0 z-0"
+        >
           <Image
-            src="/d.png"
+            src="/shop/d.png"
             alt="Projects Hero"
             fill
             className="object-cover"
@@ -63,6 +124,7 @@ export default function Projects() {
           />
           <div className="absolute inset-0 bg-black/50" />
         </motion.div>
+
         <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -128,20 +190,21 @@ export default function Projects() {
                   <motion.div
                     className="absolute left-0 right-0"
                     style={{ top: 0, height: '100%' }}
-                    animate={hoveredIndex === index ? { y: ['0%', '-100%'] } : { y: '0%' }}
-                    transition={
-                      hoveredIndex === index
-                        ? { duration: 4, repeat: Infinity, ease: "linear", delay: 0 }
-                        : {}
-                    }
+                    animate={hoveredIndex === index ? { y: ['0%', '100%'] } : { y: '0%' }}
+                    transition={hoveredIndex === index ? {
+                      duration: 4, // slow scroll
+                      repeat: Infinity,
+                      ease: "linear",
+                      delay: 0
+                    } : {}}
                   >
                     <Image
                       src={project.image}
                       alt={project.title}
-                      width={1755}
-                      height={12200} // reduced from 800, adjust as needed
+                      width={300}
+                      height={800}
                       className="object-cover"
-                      style={{ objectPosition: 'top', height: '400px', width: '100%' }}
+                      style={{ objectPosition: 'top', height: '800px', width: '100%' }}
                       loading={index < 6 ? 'eager' : 'lazy'}
                     />
                   </motion.div>
