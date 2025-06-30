@@ -21,7 +21,7 @@ export default function PrivacyPolicy() {
       <h2 className="text-xl font-semibold mt-8 mb-2">Your Consent</h2>
       <p className="mb-4">By using our site, you consent to our website's privacy policy.</p>
       <h2 className="text-xl font-semibold mt-8 mb-2">Contact Us</h2>
-      <p>If you have any questions regarding this privacy policy, you may contact us at support@shopvix.com.</p>
+      <p>If you have any questions regarding this privacy policy, you may contact us at support@shopvix.co.</p>
     </div>
   );
 }
