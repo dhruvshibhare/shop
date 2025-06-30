@@ -138,8 +138,8 @@ export default function Projects() {
                     <Image
                       src={project.image}
                       alt={project.title}
-                      width={300}
-                      height={400} // reduced from 800, adjust as needed
+                      width={1755}
+                      height={12200} // reduced from 800, adjust as needed
                       className="object-cover"
                       style={{ objectPosition: 'top', height: '400px', width: '100%' }}
                       loading={index < 6 ? 'eager' : 'lazy'}
