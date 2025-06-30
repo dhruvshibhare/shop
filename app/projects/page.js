@@ -21,77 +21,26 @@ export default function Projects() {
   const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
+  // Card height and image height for scroll calculation
+  const CARD_HEIGHT = 400; // px
+  const IMAGE_HEIGHT = 1200; // px (visible portion for animation, adjust as needed)
+  const SCROLL_AMOUNT = IMAGE_HEIGHT - CARD_HEIGHT; // px
+
   const projects = [
-    {
-      title: 'Corporate/Ajency',
-      category: 'Corporate',
-      image: '/c1.png',
-    },
-    {
-      title: 'Corporate/Ajency',
-      category: 'Corporate',
-      image: '/c2.png',
-    },
-    {
-      title: 'Corporate/Ajency',
-      category: 'Corporate',
-      image: '/c3.png',
-    },
-    {
-      title: 'Corporate/Ajency',
-      category: 'Corporate',
-      image: '/c4.png',
-    },
-    {
-      title: 'Ecommerce Store',
-      category: 'Ecommerce',
-      image: '/e1.png',
-    },
-    {
-      title: 'Ecommerce Store',
-      category: 'Ecommerce',
-      image: '/e2.png',
-    },
-    {
-      title: 'Ecommerce Store',
-      category: 'Ecommerce',
-      image: '/e3.png',
-    },
-    {
-      title: 'Ecommerce Store',
-      category: 'Ecommerce',
-      image: '/e4.png',
-    },
-    {
-      title: 'Hospital/Farmacy',
-      category: 'Healthcare',
-      image: '/h1.png',
-    },
-    {
-      title: 'Hospital/Farmacy',
-      category: 'Healthcare',
-      image: '/h2.png',
-    },
-    {
-      title: 'Real Estate',
-      category: 'Real Estate',
-      image: '/t.png',
-    },
-    {
-      title: 'Real Estate',
-      category: 'Real Estate',
-      image: '/t1.png',
-    },
-    {
-      title: 'Real Estate',
-      category: 'Real Estate',
-      image: '/t2.png',
-    },
-    {
-      title: 'Real Estate',
-      category: 'Real Estate',
-      image: '/t3.png',
-    },
+    { title: 'Corporate/Ajency', category: 'Corporate', image: '/c1.png' },
+    { title: 'Corporate/Ajency', category: 'Corporate', image: '/c2.png' },
+    { title: 'Corporate/Ajency', category: 'Corporate', image: '/c3.png' },
+    { title: 'Corporate/Ajency', category: 'Corporate', image: '/c4.png' },
+    { title: 'Ecommerce Store', category: 'Ecommerce', image: '/e1.png' },
+    { title: 'Ecommerce Store', category: 'Ecommerce', image: '/e2.png' },
+    { title: 'Ecommerce Store', category: 'Ecommerce', image: '/e3.png' },
+    { title: 'Ecommerce Store', category: 'Ecommerce', image: '/e4.png' },
+    { title: 'Hospital/Farmacy', category: 'Healthcare', image: '/h1.png' },
+    { title: 'Hospital/Farmacy', category: 'Healthcare', image: '/h2.png' },
+    { title: 'Real Estate', category: 'Real Estate', image: '/t.png' },
+    { title: 'Real Estate', category: 'Real Estate', image: '/t1.png' },
+    { title: 'Real Estate', category: 'Real Estate', image: '/t2.png' },
+    { title: 'Real Estate', category: 'Real Estate', image: '/t3.png' },
   ];
 
   const filters = [
@@ -102,20 +51,15 @@ export default function Projects() {
     { value: 'Healthcare', label: 'Healthcare' }
   ];
 
-  const filteredProjects = projects.filter(project => {
-    return filter === 'all' || project.category === filter;
-  });
+  const filteredProjects = projects.filter(project => filter === 'all' || project.category === filter);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-background">
       {/* Hero Section */}
       <section ref={heroRef} className="relative h-[60vh] min-h-[500px] overflow-hidden">
-        <motion.div
-          style={{ y, opacity }}
-          className="absolute inset-0 z-0"
-        >
+        <motion.div style={{ y, opacity }} className="absolute inset-0 z-0">
           <Image
-            src="/shop/d.png"
+            src="/d.png"
             alt="Projects Hero"
             fill
             className="object-cover"
@@ -124,7 +68,6 @@ export default function Projects() {
           />
           <div className="absolute inset-0 bg-black/50" />
         </motion.div>
-
         <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -186,25 +129,35 @@ export default function Projects() {
                 onMouseLeave={() => setHoveredIndex(null)}
               >
                 {/* Project Image Frame with Scrolling Animation */}
-                <div className="relative w-full aspect-[9/16] bg-card rounded-2xl border border-border shadow-lg overflow-hidden flex items-center justify-center">
+                <div
+                  className="relative w-full overflow-hidden rounded-2xl border border-border shadow-lg flex items-center justify-center"
+                  style={{ height: `${CARD_HEIGHT}px` }}
+                >
                   <motion.div
-                    className="absolute left-0 right-0"
-                    style={{ top: 0, height: '100%' }}
-                    animate={hoveredIndex === index ? { y: ['0%', '66.66%'] } : { y: '0%' }}
-                    transition={hoveredIndex === index ? {
-                      duration: 4, // slow scroll
-                      repeat: Infinity,
-                      ease: "linear",
-                      delay: 0
-                    } : {}}
+                    className="absolute left-0 w-full"
+                    style={{ height: `${IMAGE_HEIGHT}px`, top: 0 }}
+                    animate={
+                      hoveredIndex === index
+                        ? { top: `-${SCROLL_AMOUNT}px` }
+                        : { top: '0px' }
+                    }
+                    transition={
+                      hoveredIndex === index
+                        ? { duration: 4, ease: "linear" }
+                        : { duration: 0.6 }
+                    }
                   >
                     <Image
                       src={project.image}
                       alt={project.title}
-                      width={300}
-                      height={800}
-                      className="object-cover"
-                      style={{ objectPosition: 'top', height: '800px', width: '100%' }}
+                      width={1755}
+                      height={IMAGE_HEIGHT}
+                      className="object-cover w-full"
+                      style={{
+                        height: `${IMAGE_HEIGHT}px`,
+                        width: '100%',
+                        objectPosition: 'top'
+                      }}
                       loading={index < 6 ? 'eager' : 'lazy'}
                     />
                   </motion.div>
