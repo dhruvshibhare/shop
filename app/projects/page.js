@@ -190,7 +190,7 @@ export default function Projects() {
                   <motion.div
                     className="absolute left-0 right-0"
                     style={{ top: 0, height: '100%' }}
-                    animate={hoveredIndex === index ? { y: ['0%', '100%'] } : { y: '0%' }}
+                    animate={hoveredIndex === index ? { y: ['0%', '66.66%'] } : { y: '0%' }}
                     transition={hoveredIndex === index ? {
                       duration: 4, // slow scroll
                       repeat: Infinity,
