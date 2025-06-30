@@ -12,14 +12,14 @@ export default function ProjectShowcase() {
   const controls = useAnimation();
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  // Sample project data with tall scrolling images
+  // Updated project data with correct image paths
   const projects = [
     {
       id: 1,
       title: 'Lumina Finance',
       category: 'Corporate Website',
       description: 'Modern fintech platform with real-time data visualization and interactive dashboards.',
-      image: '/www.shopvix.co/c1.png',
+      image: '/c1.png',
       link: '/projects'
     },
     {
@@ -27,7 +27,7 @@ export default function ProjectShowcase() {
       title: 'Orbital Gallery',
       category: 'Cool Agency',
       description: 'Interactive 3D art gallery experience with WebGL and custom animations.',
-      image: '/shop/c2.png',
+      image: '/c2.png',
       link: '/projects'
     },
     {
@@ -35,7 +35,7 @@ export default function ProjectShowcase() {
       title: 'Eco Impact',
       category: 'Ecommerce',
       description: 'UX/UI design for an environmental sustainability platform with intuitive data reporting.',
-      image: '/shop/e1.png',
+      image: '/e1.png',
       link: '/projects'
     },
     {
@@ -43,7 +43,7 @@ export default function ProjectShowcase() {
       title: 'Velocity Store',
       category: 'Ecommerce',
       description: 'E-commerce platform optimization reducing load time by 70% and increasing conversions.',
-      image: '/shop/e2.png',
+      image: '/e2.png',
       link: '/projects'
     }
   ];
@@ -172,8 +172,8 @@ export default function ProjectShowcase() {
               <motion.div
                 className="absolute inset-0 rounded-2xl border-2 border-primary/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 animate={{
-                  boxShadow: hoveredIndex === index 
-                    ? "0 0 30px rgba(var(--primary), 0.3)" 
+                  boxShadow: hoveredIndex === index
+                    ? "0 0 30px rgba(var(--primary), 0.3)"
                     : "0 0 0px rgba(var(--primary), 0)"
                 }}
               />
