@@ -19,6 +19,9 @@ export const metadata = {
   authors: [{ name: 'ShopVix' }],
   viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
+  icons: {
+    icon: '/favicon.svg', // SVG favicon logo in public folder
+  },
 };
 
 export default function RootLayout({
@@ -35,6 +38,8 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="mobile-web-app-capable" content="yes" />
+        {/* Favicon for browsers that do not support metadata icons */}
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       </head>
       <body className={montserrat.className}>
         <Cursor />
