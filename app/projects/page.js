@@ -128,7 +128,7 @@ export default function Projects() {
                   <motion.div
                     className="absolute left-0 right-0"
                     style={{ top: 0, height: '100%' }}
-                    animate={hoveredIndex === index ? { y: ['0%', '-66.66%'] } : { y: '0%' }}
+                    animate={hoveredIndex === index ? { y: ['0%', '-100%'] } : { y: '0%' }}
                     transition={
                       hoveredIndex === index
                         ? { duration: 4, repeat: Infinity, ease: "linear", delay: 0 }
@@ -139,9 +139,9 @@ export default function Projects() {
                       src={project.image}
                       alt={project.title}
                       width={300}
-                      height={800}
+                      height={400} // reduced from 800, adjust as needed
                       className="object-cover"
-                      style={{ objectPosition: 'top', height: '800px', width: '100%' }}
+                      style={{ objectPosition: 'top', height: '400px', width: '100%' }}
                       loading={index < 6 ? 'eager' : 'lazy'}
                     />
                   </motion.div>
