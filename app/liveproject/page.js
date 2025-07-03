@@ -23,22 +23,44 @@ export default function LiveProjects() {
   // Example live projects data
   const liveProjects = [
     {
-      title: 'ShopVix Portfolio',
-      category: 'Agency',
-      image: '/images/c1.png',
-      liveLink: 'https://shopvix.com',
+      image: '/event.png',
+      liveLink: 'https://pkss.mydbsite.com/',
     },
     {
-      title: 'Eco Impact Live',
-      category: 'Ecommerce',
-      image: '/images/e1.png',
-      liveLink: 'https://ecoimpact.com',
+      image: '/ngo.png',
+      liveLink: 'https://sukanyasamriddhifoundation.mydbsite.com/',
     },
     {
-      title: 'Velocity Store Live',
-      category: 'Ecommerce',
-      image: '/images/e2.png',
-      liveLink: 'https://velocitystore.com',
+      image: '/interior.png',
+      liveLink: 'https://apinteriors.mydbsite.com/',
+    },
+     {
+      image: '/gifts.png',
+      liveLink: 'https://forevergifthub.in/',
+    },
+     {
+      image: '/rest.png',
+      liveLink: 'https://delightofindia.mydbsite.com/',
+    },
+     {
+      image: '/yoga.png',
+      liveLink: 'https://www.yogtravel.com/',
+    },
+     {
+      image: '/alpine.png',
+      liveLink: 'https://alpinecollege.edu.in/',
+    },
+     {
+      image: '/travel.png',
+      liveLink: 'https://www.travelparinda.com/',
+    },
+     {
+      image: '/bestindian.png',
+      liveLink: 'https://bestindian.co.in/',
+    },
+     {
+      image: '/betternutrition.png',
+      liveLink: 'https://betternutritionforall.in/',
     },
     // Add more live projects as needed
   ];
