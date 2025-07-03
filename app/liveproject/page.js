@@ -6,6 +6,79 @@ import { motion, useInView, useTransform, useScroll } from 'framer-motion';
 import { ArrowUpRight, ExternalLink } from 'lucide-react';
 
 export default function LiveProjects() {
+  // Add category property to each project
+  const liveProjects = [
+    {
+      image: '/event.png',
+      liveLink: 'https://pkss.mydbsite.com/',
+      title: 'PKSS Event',
+      category: 'Basic'
+    },
+    {
+      image: '/ngo.png',
+      liveLink: 'https://sukanyasamriddhifoundation.mydbsite.com/',
+      title: 'Sukanya Samriddhi Foundation',
+      category: 'Static'
+    },
+    {
+      image: '/interior.png',
+      liveLink: 'https://apinteriors.mydbsite.com/',
+      title: 'AP Interiors',
+      category: 'Basic'
+    },
+    {
+      image: '/gifts.png',
+      liveLink: 'https://forevergifthub.in/',
+      title: 'Forever Gift Hub',
+      category: 'Ecommerce'
+    },
+    {
+      image: '/rest.png',
+      liveLink: 'https://delightofindia.mydbsite.com/',
+      title: 'Delight of India',
+      category: 'Basic'
+    },
+    {
+      image: '/yoga.png',
+      liveLink: 'https://www.yogtravel.com/',
+      title: 'YogTravel',
+      category: 'Ecommerce'
+    },
+    {
+      image: '/alpine.png',
+      liveLink: 'https://alpinecollege.edu.in/',
+      title: 'Alpine College',
+      category: 'Static'
+    },
+    {
+      image: '/travel.png',
+      liveLink: 'https://www.travelparinda.com/',
+      title: 'Travel Parinda',
+      category: 'Ecommerce'
+    },
+    {
+      image: '/bestindian.png',
+      liveLink: 'https://bestindian.co.in/',
+      title: 'Best Indian',
+      category: 'Ecommerce'
+    },
+    {
+      image: '/betternutrition.png',
+      liveLink: 'https://betternutritionforall.in/',
+      title: 'Better Nutrition For All',
+      category: 'Static'
+    },
+    // Add more live projects as needed
+  ];
+
+  const filters = [
+    { value: 'all', label: 'All Projects' },
+    { value: 'Static', label: 'Static' },
+    { value: 'Basic', label: 'Basic' },
+    { value: 'Ecommerce', label: 'Ecommerce' }
+  ];
+
+  const [filter, setFilter] = useState('Basic');
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const heroRef = useRef(null);
   const showcaseRef = useRef(null);
@@ -20,50 +93,11 @@ export default function LiveProjects() {
   const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
-  // Example live projects data
-  const liveProjects = [
-    {
-      image: '/event.png',
-      liveLink: 'https://pkss.mydbsite.com/',
-    },
-    {
-      image: '/ngo.png',
-      liveLink: 'https://sukanyasamriddhifoundation.mydbsite.com/',
-    },
-    {
-      image: '/interior.png',
-      liveLink: 'https://apinteriors.mydbsite.com/',
-    },
-     {
-      image: '/gifts.png',
-      liveLink: 'https://forevergifthub.in/',
-    },
-     {
-      image: '/rest.png',
-      liveLink: 'https://delightofindia.mydbsite.com/',
-    },
-     {
-      image: '/yoga.png',
-      liveLink: 'https://www.yogtravel.com/',
-    },
-     {
-      image: '/alpine.png',
-      liveLink: 'https://alpinecollege.edu.in/',
-    },
-     {
-      image: '/travel.png',
-      liveLink: 'https://www.travelparinda.com/',
-    },
-     {
-      image: '/bestindian.png',
-      liveLink: 'https://bestindian.co.in/',
-    },
-     {
-      image: '/betternutrition.png',
-      liveLink: 'https://betternutritionforall.in/',
-    },
-    // Add more live projects as needed
-  ];
+  // Filter projects based on selected filter
+  const filteredProjects =
+    filter === 'basic'
+      ? liveProjects
+      : liveProjects.filter(project => project.category === filter);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-background">
@@ -74,7 +108,7 @@ export default function LiveProjects() {
           className="absolute inset-0 z-0"
         >
           <Image
-            src="/images/h1.png"
+            src="/h1.png"
             alt="Live Projects Hero"
             fill
             className="object-cover"
@@ -104,6 +138,27 @@ export default function LiveProjects() {
         </div>
       </section>
 
+      {/* Filter Section */}
+      <section className="py-8 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap gap-4 justify-center">
+            {filters.map((filterItem) => (
+              <button
+                key={filterItem.value}
+                onClick={() => setFilter(filterItem.value)}
+                className={`px-6 py-2 rounded-full transition-colors ${
+                  filter === filterItem.value
+                    ? 'bg-primary text-primary-foreground'
+                    : 'bg-muted hover:bg-muted/80'
+                }`}
+              >
+                {filterItem.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Projects Grid */}
       <section ref={showcaseRef} className="py-16 bg-background">
         <div className="container mx-auto px-4">
@@ -113,7 +168,7 @@ export default function LiveProjects() {
             transition={{ duration: 0.6 }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {liveProjects.map((project, index) => (
+            {filteredProjects.map((project, index) => (
               <motion.div
                 key={`${project.title}-${index}`}
                 initial={{ opacity: 0, y: 20 }}
@@ -125,14 +180,14 @@ export default function LiveProjects() {
                 onTouchStart={() => setHoveredIndex(index)}
                 onTouchEnd={() => setHoveredIndex(null)}
               >
-                {/* Project Image Frame with Scrolling Animation */}
+                {/* Project Image Frame */}
                 <div className="relative w-full aspect-[9/16] bg-card rounded-2xl border border-border shadow-lg overflow-hidden flex items-center justify-center">
                   <motion.div
                     className="absolute left-0 right-0"
                     style={{ top: 0, height: '100%' }}
                     animate={hoveredIndex === index ? { y: ['0%', '-66.66%'] } : { y: '0%' }}
                     transition={hoveredIndex === index ? {
-                      duration: 40, // slow scroll
+                      duration: 40,
                       repeat: Infinity,
                       ease: "linear",
                       delay: 0
@@ -148,7 +203,7 @@ export default function LiveProjects() {
                       loading={index < 6 ? 'eager' : 'lazy'}
                     />
                   </motion.div>
-                  {/* Gradient Overlay */}
+                  {/* Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   {/* Project Info Overlay */}
                   <motion.div
