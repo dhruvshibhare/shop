@@ -34,7 +34,7 @@ const plans = [
       'Product catalog',
       'Shopping cart',
       'Payment gateway integration',
-      'Order management',
+      'Admin Pannel',
     ],
   },
   {
