@@ -70,6 +70,11 @@ export default function Footer() {
                   Projects
                 </Link>
               </li>
+             <li>
+                <Link href="/pricing" className="text-muted-foreground hover:text-primary transition-colors">
+                  Pricing
+                </Link>
+              </li> 
               <li>
                 <Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">
                   Contact
