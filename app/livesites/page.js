@@ -52,13 +52,6 @@ export default function LiveSites() {
     }
   ];
 
-  const categories = ['All', 'Corporate', 'Ecommerce', 'Healthcare', 'Real Estate'];
-  const [selectedCategory, setSelectedCategory] = useState('All');
-
-  const filteredProjects = liveProjects.filter(project => 
-    selectedCategory === 'All' || project.category === selectedCategory
-  );
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-background">
       {/* Hero Section */}
@@ -80,27 +73,6 @@ export default function LiveSites() {
         </div>
       </section>
 
-      {/* Filter Section */}
-      <section className="py-8 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap gap-4 justify-center">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-2 rounded-full transition-colors ${
-                  selectedCategory === category
-                    ? 'bg-primary text-primary-foreground'
-                    : 'bg-muted hover:bg-muted/80'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Live Projects List */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
@@ -110,7 +82,7 @@ export default function LiveSites() {
             transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto space-y-6"
           >
-            {filteredProjects.map((project, index) => (
+            {liveProjects.map((project, index) => (
               <motion.div
                 key={project.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -161,18 +133,6 @@ export default function LiveSites() {
               </motion.div>
             ))}
           </motion.div>
-
-          {filteredProjects.length === 0 && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-center py-12"
-            >
-              <p className="text-muted-foreground text-lg">
-                No live projects found for the selected category.
-              </p>
-            </motion.div>
-          )}
         </div>
       </section>
 
