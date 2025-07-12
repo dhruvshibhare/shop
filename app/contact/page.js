@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone } from 'lucide-react';
+import { Mail, Phone, Check } from 'lucide-react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -10,7 +10,8 @@ export default function Contact() {
     email: '',
     phone: '',
     message: '',
-    service: ''
+    service: '',
+    package: ''
   });
   
   const [formStatus, setFormStatus] = useState(null);
@@ -25,6 +26,53 @@ export default function Contact() {
   
   // Place your Google Apps Script Web App URL here
   const GOOGLE_SCRIPT_URL = 'https://sheetdb.io/api/v1/izopzypfwgzkz';
+
+  const pricingPlans = [
+    {
+      name: 'Static',
+      price: '₹5,999',
+      features: [
+        'Up to 5 pages',
+        'Responsive design',
+        'Contact form',
+        'Basic SEO',
+        '1 year hosting',
+      ],
+    },
+    {
+      name: 'Basic',
+      price: '₹11,999',
+      features: [
+        'Up to 10 pages',
+        'All Static features',
+        'Blog/News section',
+        'Google Analytics setup',
+        'Priority support',
+      ],
+    },
+    {
+      name: 'Ecommerce',
+      price: '₹19,999',
+      features: [
+        'All Basic features',
+        'Product catalog',
+        'Shopping cart',
+        'Payment gateway integration',
+        'Order management',
+      ],
+    },
+    {
+      name: 'Custom',
+      price: 'Contact Us',
+      features: [
+        'Fully custom solution',
+        'Advanced integrations',
+        'Custom design & features',
+        'Dedicated project manager',
+        'Quote on request',
+      ],
+    },
+  ];
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -42,7 +90,8 @@ export default function Contact() {
           email: '',
           phone: '',
           message: '',
-          service: ''
+          service: '',
+          package: ''
         });
       } else {
         setFormStatus('error');
@@ -72,6 +121,48 @@ export default function Contact() {
               Have a project in mind? Let&apos;s talk about how we can bring your vision to life.
             </p>
           </motion.div>
+          {/* Pricing Packages Section */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="max-w-6xl mx-auto mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-white">
+              Choose Your Package
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {pricingPlans.map((plan, idx) => (
+                <div
+                  key={plan.name}
+                  className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl p-6 hover:border-white/40 transition-all duration-300 hover:scale-105"
+                >
+                  <h3 className="text-xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="text-2xl font-bold text-cyan-400 mb-4">{plan.price}</div>
+                  <ul className="space-y-2 mb-6">
+                    {plan.features.map((feature, i) => (
+                      <li key={i} className="flex items-center gap-2 text-sm text-gray-300">
+                        <Check className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <button
+                    type="button"
+                    onClick={() => setFormData(prev => ({ ...prev, package: plan.name }))}
+                    className={`w-full py-2 px-4 rounded-lg font-medium transition-colors ${
+                      formData.package === plan.name
+                        ? 'bg-cyan-400 text-black'
+                        : 'bg-white/10 text-white hover:bg-white/20'
+                    }`}
+                  >
+                    {formData.package === plan.name ? 'Selected' : 'Select Package'}
+                  </button>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
           <div className="grid grid-cols-1 gap-8 max-w-2xl mx-auto">
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
@@ -160,11 +251,29 @@ export default function Contact() {
                   >
                     <option value="">Select a service</option>
                     <option value="web-development">Web Development</option>
+                    <option value="ecommerce">E-commerce Development</option>
                     <option value="interactive">Interactive Experiences</option>
                     <option value="design">UX/UI Design</option>
                     <option value="performance">Performance Optimization</option>
+                    <option value="maintenance">Website Maintenance</option>
+                    <option value="seo">SEO Services</option>
                   </select>
                 </div>
+                {formData.package && (
+                  <div>
+                    <label className="block mb-2 font-medium text-black">Selected Package</label>
+                    <div className="p-3 border border-gray-300 rounded-lg bg-gray-50 text-black">
+                      <span className="font-semibold">{formData.package}</span>
+                      <button
+                        type="button"
+                        onClick={() => setFormData(prev => ({ ...prev, package: '' }))}
+                        className="ml-2 text-sm text-gray-500 hover:text-gray-700"
+                      >
+                        Change
+                      </button>
+                    </div>
+                  </div>
+                )}
                 <div>
                   <label htmlFor="message" className="block mb-2 font-medium text-black">Message</label>
                   <textarea
