@@ -189,10 +189,10 @@ export default function LiveSites() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 sm:mb-6">
               Live Sites
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 px-4">
               Explore our live projects and see our work in action. Each link takes you directly to the deployed applications we've built.
             </p>
           </motion.div>
@@ -218,37 +218,38 @@ export default function LiveSites() {
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
-                <div className="flex items-start justify-between">
+                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
                   <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <h3 className="text-xl font-semibold">{project.title}</h3>
-                      <span className="inline-flex items-center px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 mb-2">
+                      <h3 className="text-lg sm:text-xl font-semibold">{project.title}</h3>
+                      <span className="inline-flex items-center px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full w-fit">
                         <span className="w-2 h-2 bg-green-500 rounded-full mr-1"></span>
                         {project.status}
                       </span>
                     </div>
-                    <p className="text-muted-foreground mb-3">
+                    <p className="text-muted-foreground mb-3 text-sm sm:text-base">
                       {project.description}
                     </p>
-                    <div className="flex items-center gap-4">
-                      <span className="inline-block px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
+                      <span className="inline-block px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full w-fit">
                         {project.category}
                       </span>
-                      <span className="text-sm text-muted-foreground">
+                      <span className="text-xs sm:text-sm text-muted-foreground break-all">
                         {project.url}
                       </span>
                     </div>
                   </div>
                   
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center justify-center lg:justify-end">
                     <a
                       href={project.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
+                      className="flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm sm:text-base w-full sm:w-auto justify-center"
                     >
                       <Globe className="w-4 h-4" />
-                      Visit Site
+                      <span className="hidden sm:inline">Visit Site</span>
+                      <span className="sm:hidden">Visit</span>
                       <ArrowUpRight className="w-4 h-4" />
                     </a>
                   </div>
@@ -271,15 +272,15 @@ export default function LiveSites() {
             transition={{ duration: 0.6 }}
             className="max-w-2xl mx-auto"
           >
-            <h2 className="text-3xl font-bold mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">
               Want to see your project here?
             </h2>
-            <p className="text-muted-foreground mb-8">
+            <p className="text-muted-foreground mb-6 sm:mb-8 px-4">
               Let's work together to bring your vision to life and add it to our portfolio of live sites.
             </p>
             <a
               href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
+              className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors text-sm sm:text-base"
             >
               Start Your Project
               <ArrowUpRight className="w-4 h-4" />
