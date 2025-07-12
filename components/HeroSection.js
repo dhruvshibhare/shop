@@ -247,29 +247,37 @@ export default function HeroSection() {
               </div>
             </motion.div>
             
-            {/* Simplified decorative elements for mobile */}
-            <motion.div 
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="hidden lg:flex justify-center items-center relative"
-            >
-              <div className="relative">
-                {/* Reduced floating elements */}
-                {[...Array(3)].map((_, i) => (
-                  <div
-                    key={i}
-                    className="absolute w-12 h-12 bg-muted rounded-lg border float-animation"
-                    style={{
-                      top: `${Math.random() * 150}px`,
-                      left: `${Math.random() * 100}px`,
-                      animationDelay: `${i * 1}s`,
-                      animationDuration: `${6 + i}s`
-                    }}
-                  />
-                ))}
-              </div>
-            </motion.div>
+            {/* Right side: decorative elements (desktop) and hero image (all screens) */}
+            <div className="flex flex-col items-center justify-center w-full">
+              {/* Decorative elements - Desktop only */}
+              <motion.div 
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="hidden lg:flex justify-center items-center relative mb-6"
+              >
+                <div className="relative">
+                  {[...Array(3)].map((_, i) => (
+                    <div
+                      key={i}
+                      className="absolute w-12 h-12 bg-muted rounded-lg border float-animation"
+                      style={{
+                        top: `${Math.random() * 150}px`,
+                        left: `${Math.random() * 100}px`,
+                        animationDelay: `${i * 1}s`,
+                        animationDuration: `${6 + i}s`
+                      }}
+                    />
+                  ))}
+                </div>
+              </motion.div>
+              {/* Hero Image - Always visible, responsive */}
+              <img 
+                src="/hero.png" 
+                alt="Hero section visual" 
+                className="w-64 h-auto max-w-full rounded-xl shadow-lg object-contain sm:w-80 md:w-96 lg:w-[28rem] xl:w-[32rem]"
+              />
+            </div>
           </div>
         </div>
       </div>
