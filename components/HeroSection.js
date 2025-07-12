@@ -275,7 +275,7 @@ export default function HeroSection() {
               <img 
                 src="/hero.png" 
                 alt="Hero section visual" 
-                className="w-64 h-auto max-w-full rounded-xl shadow-lg object-contain sm:w-80 md:w-96 lg:w-[28rem] xl:w-[32rem]"
+                className="w-80 h-auto max-w-full rounded-xl shadow-lg object-contain sm:w-[28rem] md:w-[32rem] lg:w-[38rem] xl:w-[44rem]"
               />
             </div>
           </div>
