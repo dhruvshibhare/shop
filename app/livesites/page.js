@@ -9,45 +9,171 @@ export default function LiveSites() {
 
   const liveProjects = [
     {
-      title: 'Lumina Finance',
-      description: 'A modern fintech platform with real-time data visualization and interactive dashboards.',
-      url: 'https://lumina-finance.com',
-      category: 'Corporate',
-      status: 'Live'
-    },
-    {
-      title: 'Orbital Gallery',
-      description: 'Interactive 3D art gallery experience with WebGL and custom animations.',
-      url: 'https://orbital-gallery.com',
-      category: 'Corporate',
-      status: 'Live'
-    },
-    {
-      title: 'Eco Impact',
-      description: 'Environmental sustainability platform with intuitive data reporting.',
-      url: 'https://eco-impact.org',
+      title: 'Best Indian',
+      description: 'Indian products and services platform.',
+      url: 'https://bestindian.co.in',
       category: 'Ecommerce',
       status: 'Live'
     },
     {
-      title: 'Velocity Store',
-      description: 'E-commerce platform with optimized performance and seamless user experience.',
-      url: 'https://velocity-store.com',
-      category: 'Ecommerce',
-      status: 'Live'
-    },
-    {
-      title: 'Harmony Music',
-      description: 'Streaming service with custom audio visualization and seamless playback.',
-      url: 'https://harmony-music.com',
+      title: 'Better Nutrition For All',
+      description: 'Health and nutrition platform.',
+      url: 'https://betternutritionforall.in',
       category: 'Healthcare',
       status: 'Live'
     },
     {
-      title: 'Nebula Explorer',
-      description: 'Interactive space exploration experience with 3D planetary systems.',
-      url: 'https://nebula-explorer.com',
-      category: 'Real Estate',
+      title: 'The Yogez',
+      description: 'Yoga and wellness platform.',
+      url: 'https://theyogez.com',
+      category: 'Healthcare',
+      status: 'Live'
+    },
+    {
+      title: 'Snaana',
+      description: 'Wellness and lifestyle platform.',
+      url: 'https://www.snaana.com',
+      category: 'Healthcare',
+      status: 'Live'
+    },
+    {
+      title: 'Factory Price Shop',
+      description: 'Online retail store with factory direct pricing.',
+      url: 'https://www.factorypriceshop9.com',
+      category: 'Ecommerce',
+      status: 'Live'
+    },
+    {
+      title: 'Travel Parinda',
+      description: 'Travel and tourism platform.',
+      url: 'https://www.travelparinda.com',
+      category: 'Travel',
+      status: 'Live'
+    },
+    {
+      title: 'The Crazy Mountaineers',
+      description: 'Adventure and mountaineering services.',
+      url: 'https://www.thecrazymountaineers.com/',
+      category: 'Travel',
+      status: 'Live'
+    },
+    {
+      title: 'Doon Edu',
+      description: 'Educational platform and services.',
+      url: 'https://www.doonedu.com',
+      category: 'Education',
+      status: 'Live'
+    },
+    {
+      title: 'Alpine College',
+      description: 'Educational institution website.',
+      url: 'https://alpinecollege.edu.in',
+      category: 'Education',
+      status: 'Live'
+    },
+    {
+      title: 'Yog Travel',
+      description: 'Yoga retreat and travel services.',
+      url: 'https://www.yogtravel.com',
+      category: 'Travel',
+      status: 'Live'
+    },
+    {
+      title: 'Buddha Yog Peeth',
+      description: 'Yoga school and spiritual center.',
+      url: 'https://www.buddhayogpeeth.com',
+      category: 'Healthcare',
+      status: 'Live'
+    },
+    {
+      title: 'Canada Yoga Studio',
+      description: 'Yoga studio and wellness center.',
+      url: 'https://www.canadayogastudio.com',
+      category: 'Healthcare',
+      status: 'Live'
+    },
+    {
+      title: 'Clover Organic',
+      description: 'Organic products and healthy living.',
+      url: 'https://www.cloverorganic.com',
+      category: 'Ecommerce',
+      status: 'Live'
+    },
+    {
+      title: 'Luxe Esthetica',
+      description: 'Beauty and aesthetics services.',
+      url: 'https://www.luxeesthetica.com',
+      category: 'Beauty',
+      status: 'Live'
+    },
+    {
+      title: 'Vihana Retreat',
+      description: 'Wellness retreat and spa services.',
+      url: 'https://www.vihanaretreat.com',
+      category: 'Healthcare',
+      status: 'Live'
+    },
+    {
+      title: 'Sambhav Ethnic',
+      description: 'Indian clothing brand with traditional and modern designs.',
+      url: 'https://sambhavethnic.com',
+      category: 'Fashion',
+      status: 'Live'
+    },
+    {
+      title: 'Lotus Pops',
+      description: 'Healthy snacks and nutritious food products.',
+      url: 'https://www.lotuspops.com',
+      category: 'Food',
+      status: 'Live'
+    },
+    {
+      title: '7 Chakras Yoga School',
+      description: 'Professional yoga school and training center.',
+      url: 'https://7chakrasyogaschool.com',
+      category: 'Education',
+      status: 'Live'
+    },
+    {
+      title: 'Anamay Dhara Ayurveda',
+      description: 'Ayurveda center and holistic wellness.',
+      url: 'http://anamaydharaayurveda.com',
+      category: 'Healthcare',
+      status: 'Live'
+    },
+    {
+      title: 'UIHM',
+      description: 'Hotel Management Institute and training center.',
+      url: 'https://uihm.in',
+      category: 'Education',
+      status: 'Live'
+    },
+    {
+      title: 'Gloroots Aesthetics',
+      description: 'Skin care and beauty treatments.',
+      url: 'http://glorootsaesthetics.com',
+      category: 'Beauty',
+      status: 'Live'
+    },
+    {
+      title: 'SSM Academy',
+      description: 'IAS Institute and civil services coaching.',
+      url: 'https://ssmacademy.co.in',
+      category: 'Education',
+      status: 'Live'
+    },
+    {
+      title: 'Pushpa India',
+      description: 'Online grocery store and fresh produce.',
+      url: 'https://pushpaindia.in',
+      category: 'Ecommerce',
+      status: 'Live'
+    },
+    {
+      title: 'Forever Gift Hub',
+      description: 'Custom gifts and personalized products.',
+      url: 'https://forevergifthub.in',
+      category: 'Ecommerce',
       status: 'Live'
     }
   ];
