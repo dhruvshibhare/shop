@@ -221,12 +221,12 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="max-w-3xl"
             >
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+              <h1 className="text-2xl sm:text-3xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
                 We create digital<br />
                 <span className="text-muted-foreground">experiences</span> that matter
               </h1>
               
-              <p className="text-xl md:text-2xl mb-8 text-muted-foreground">
+              <p className="text-base sm:text-lg md:text-2xl mb-8 text-muted-foreground">
                 Innovative web development solutions for forward-thinking businesses.
               </p>
               
