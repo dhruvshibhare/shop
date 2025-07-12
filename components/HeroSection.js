@@ -278,7 +278,7 @@ export default function HeroSection() {
                 width={800}
                 height={600}
                 priority
-                className="w-80 h-auto max-w-full rounded-xl shadow-lg object-contain sm:w-[28rem] md:w-[32rem] lg:w-[38rem] xl:w-[44rem]"
+                className="w-full max-w-xs sm:w-[28rem] md:w-[32rem] lg:w-[38rem] xl:w-[44rem] h-auto rounded-xl shadow-lg object-contain"
               />
             </div>
           </div>
