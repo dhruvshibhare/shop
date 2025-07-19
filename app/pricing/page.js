@@ -6,7 +6,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 const plans = [
   {
     name: 'Static',
-    price: '₹5,999',
+    price: '₹11,999',
     features: [
       'Up to 5 pages',
       'Responsive design',
@@ -17,7 +17,7 @@ const plans = [
   },
   {
     name: 'Basic',
-    price: '₹11,999',
+    price: '₹17,999',
     features: [
       'Up to 10 pages',
       'All Static features',
@@ -28,7 +28,7 @@ const plans = [
   },
   {
     name: 'Ecommerce',
-    price: '₹19,999',
+    price: '₹27,999,
     features: [
       'All Basic features',
       'Product catalog',
