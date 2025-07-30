@@ -8,6 +8,77 @@ export default function LiveSites() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const liveProjects = [
+    
+    {
+      title: 'Ada Chikan',
+      description: 'Premium Chikankari ethnic wear and traditional crafts.',
+      url: 'https://www.adachikan.com',
+      category: 'Fashion',
+      status: 'Live'
+    },
+    {
+      title: 'Emiraas',
+      description: 'Luxury fashion and lifestyle brand.',
+      url: 'https://emiraas.in',
+      category: 'Fashion',
+      status: 'Live'
+    },
+    {
+      title: 'AB Jewels',
+      description: 'Fine jewelry and precious gemstones.',
+      url: 'https://www.abjewels.com',
+      category: 'Jewelry',
+      status: 'Live'
+    },
+    {
+      title: 'Sundari Silks',
+      description: 'Traditional silk sarees and ethnic wear.',
+      url: 'https://www.sundarisilks.com',
+      category: 'Fashion',
+      status: 'Live'
+    },
+    {
+      title: 'Avadh Chikan',
+      description: 'Authentic Chikankari clothing and accessories.',
+      url: 'https://avadhchikan.in',
+      category: 'Fashion',
+      status: 'Live'
+    },
+    {
+      title: 'Natty Garb',
+      description: 'Contemporary fashion and trendy clothing.',
+      url: 'https://www.nattygarb.com',
+      category: 'Fashion',
+      status: 'Live'
+    },
+    {
+      title: 'Polite Society',
+      description: 'Modern fashion and lifestyle brand.',
+      url: 'https://politesocietyshop.com',
+      category: 'Fashion',
+      status: 'Live'
+    },
+    {
+      title: 'Sochs Social',
+      description: 'Social media and digital marketing services.',
+      url: 'http://www.sochsesocial.com',
+      category: 'Digital',
+      status: 'Live'
+    },
+    {
+      title: 'Exotic Rent a Car',
+      description: 'Luxury car rental services in Medellin.',
+      url: 'http://exoticrentacarmedellin.com',
+      category: 'Automotive',
+      status: 'Live'
+    },
+    {
+      title: 'Bharat Tapp',
+      description: 'Digital services and solutions platform.',
+      url: 'https://www.bharattapp.com',
+      category: 'Digital',
+      status: 'Live'
+    },
     {
       title: 'Best Indian',
       description: 'Indian products and services platform.',
