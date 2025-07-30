@@ -30,7 +30,6 @@ export default function Contact() {
   const pricingPlans = [
     {
       name: 'Static',
-      price: '₹5,999',
       features: [
         'Up to 5 pages',
         'Responsive design',
@@ -41,7 +40,6 @@ export default function Contact() {
     },
     {
       name: 'Basic',
-      price: '₹11,999',
       features: [
         'Up to 10 pages',
         'All Static features',
@@ -52,7 +50,6 @@ export default function Contact() {
     },
     {
       name: 'Ecommerce',
-      price: '₹19,999',
       features: [
         'All Basic features',
         'Product catalog',
